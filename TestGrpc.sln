@@ -16,7 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder1", "Solution
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGrpc.WasmClient", "src\TestGrpc.WasmClient\TestGrpc.WasmClient.csproj", "{222314FB-8814-48E4-A9B5-D2E870DF115F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestGrpc.WasmClient", "src\TestGrpc.WasmClient\TestGrpc.WasmClient.csproj", "{222314FB-8814-48E4-A9B5-D2E870DF115F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGrpc.WasmTest", "TestGrpc.WasmTest\TestGrpc.WasmTest.csproj", "{38F3629C-7524-4873-8D43-DE40D6A68B95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +42,10 @@ Global
 		{222314FB-8814-48E4-A9B5-D2E870DF115F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{222314FB-8814-48E4-A9B5-D2E870DF115F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{222314FB-8814-48E4-A9B5-D2E870DF115F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F3629C-7524-4873-8D43-DE40D6A68B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F3629C-7524-4873-8D43-DE40D6A68B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F3629C-7524-4873-8D43-DE40D6A68B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F3629C-7524-4873-8D43-DE40D6A68B95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{757DABB7-CA10-4284-8ABB-241BB6A687A6} = {8457A4A8-DA37-4150-B9A0-87C5F91054BD}
 		{9B024325-9544-4205-9D32-0C3EE68FCE38} = {8457A4A8-DA37-4150-B9A0-87C5F91054BD}
 		{222314FB-8814-48E4-A9B5-D2E870DF115F} = {8457A4A8-DA37-4150-B9A0-87C5F91054BD}
+		{38F3629C-7524-4873-8D43-DE40D6A68B95} = {8457A4A8-DA37-4150-B9A0-87C5F91054BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D012DAB-F68D-4B09-8292-94B0D9FAF665}
