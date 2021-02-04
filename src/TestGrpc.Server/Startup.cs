@@ -17,6 +17,15 @@ namespace TestGrpc.Server
                 config.ResponseCompressionLevel = System.IO.Compression.CompressionLevel.Optimal;
             });
             services.AddCodeFirstGrpcReflection();
+            
+            services.AddCors(o => o.AddPolicy("AllowAll", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .WithExposedHeaders("Grpc-Status", "Grpc-Message", "Grpc-Encoding", "Grpc-Accept-Encoding");
+            }));
+            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -28,9 +37,13 @@ namespace TestGrpc.Server
 
             app.UseRouting();
 
+            app.UseGrpcWeb();
+            app.UseCors();
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<MyTimeService>();
+                endpoints.MapGrpcService<MyTimeService>()
+                    .EnableGrpcWeb().RequireCors("AllowAll");
                 
                 endpoints.MapGet("/",
                     async context =>

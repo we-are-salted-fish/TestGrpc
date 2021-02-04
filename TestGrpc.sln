@@ -1,27 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8457A4A8-DA37-4150-B9A0-87C5F91054BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGrpc.Shared", "src\TestGrpc.Shared\TestGrpc.Shared.csproj", "{38174AA6-9312-4D72-B9C3-FED34C622E04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestGrpc.Shared", "src\TestGrpc.Shared\TestGrpc.Shared.csproj", "{38174AA6-9312-4D72-B9C3-FED34C622E04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGrpc.Server", "src\TestGrpc.Server\TestGrpc.Server.csproj", "{757DABB7-CA10-4284-8ABB-241BB6A687A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestGrpc.Server", "src\TestGrpc.Server\TestGrpc.Server.csproj", "{757DABB7-CA10-4284-8ABB-241BB6A687A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGrpc.Client", "src\TestGrpc.Client\TestGrpc.Client.csproj", "{9B024325-9544-4205-9D32-0C3EE68FCE38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestGrpc.Client", "src\TestGrpc.Client\TestGrpc.Client.csproj", "{9B024325-9544-4205-9D32-0C3EE68FCE38}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder1", "SolutionFolder1", "{D01DE51F-EF52-4161-8DF3-B1E022BC18A3}"
-ProjectSection(SolutionItems) = preProject
-	README.md = README.md
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGrpc.WasmClient", "src\TestGrpc.WasmClient\TestGrpc.WasmClient.csproj", "{222314FB-8814-48E4-A9B5-D2E870DF115F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{38174AA6-9312-4D72-B9C3-FED34C622E04} = {8457A4A8-DA37-4150-B9A0-87C5F91054BD}
-		{757DABB7-CA10-4284-8ABB-241BB6A687A6} = {8457A4A8-DA37-4150-B9A0-87C5F91054BD}
-		{9B024325-9544-4205-9D32-0C3EE68FCE38} = {8457A4A8-DA37-4150-B9A0-87C5F91054BD}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{38174AA6-9312-4D72-B9C3-FED34C622E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -36,5 +36,21 @@ Global
 		{9B024325-9544-4205-9D32-0C3EE68FCE38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B024325-9544-4205-9D32-0C3EE68FCE38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B024325-9544-4205-9D32-0C3EE68FCE38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{222314FB-8814-48E4-A9B5-D2E870DF115F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{222314FB-8814-48E4-A9B5-D2E870DF115F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{222314FB-8814-48E4-A9B5-D2E870DF115F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{222314FB-8814-48E4-A9B5-D2E870DF115F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{38174AA6-9312-4D72-B9C3-FED34C622E04} = {8457A4A8-DA37-4150-B9A0-87C5F91054BD}
+		{757DABB7-CA10-4284-8ABB-241BB6A687A6} = {8457A4A8-DA37-4150-B9A0-87C5F91054BD}
+		{9B024325-9544-4205-9D32-0C3EE68FCE38} = {8457A4A8-DA37-4150-B9A0-87C5F91054BD}
+		{222314FB-8814-48E4-A9B5-D2E870DF115F} = {8457A4A8-DA37-4150-B9A0-87C5F91054BD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D012DAB-F68D-4B09-8292-94B0D9FAF665}
 	EndGlobalSection
 EndGlobal
