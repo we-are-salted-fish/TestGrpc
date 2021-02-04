@@ -17,16 +17,26 @@ namespace TestGrpc.WasmClient
             builder.RootComponents.Add<App>("#app");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
+            
+            builder.Services.AddSingleton<StateContainer>();
+            
             builder.Services
                 .AddCodeFirstGrpcClient<ITimeService>((services, options) =>
                 {
                     options.Address = new Uri("https://localhost:5001");
                 })
-                .ConfigurePrimaryHttpMessageHandler(
-                    () => new GrpcWebHandler(GrpcWebMode.GrpcWebText, new HttpClientHandler()));
+                .ConfigureHttpClient((services,http) =>
+                {
+                    var state = services.GetService<StateContainer>();
+                    if (state?.IsLogin ??false)
+                    {
+                        http.DefaultRequestHeaders.Add("Authorization",state.AccessToken);
+                    }
+                } )
+                .ConfigurePrimaryHttpMessageHandler(() => new GrpcWebHandler(GrpcWebMode.GrpcWebText, new HttpClientHandler()));
             
             await builder.Build().RunAsync();
         }
+        
     }
 }

@@ -13,6 +13,7 @@ namespace TestGrpc.Client
     {
         static async Task Main(string[] args)
         {
+            
             GrpcClientFactory.AllowUnencryptedHttp2 = true;
             using var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var clock = channel.CreateGrpcService<ITimeService>();
