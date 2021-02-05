@@ -14,23 +14,23 @@ namespace TestGrpc.WasmClient.Pages
     {
         private readonly List<string> _testList = new();
 
-        [Inject]
-        public ITimeService TimeService { get; set; }
+        // [Inject]
+        // public ITimeService TimeService { get; set; }
     
-        protected override async Task OnInitializedAsync()
-        {
-            using var cancel = new CancellationTokenSource(TimeSpan.FromMinutes(1));
-            var options = new CallOptions();
-            try
-            {
-                //不支持流式处理。
-                await foreach (var time in TimeService.SubscribeAsync(new CallContext(options)).WithCancellation(cancel.Token))
-                {
-                    _testList.Add($"The time is now: {time.Time}");
-                }
-            }
-            catch (RpcException ex) { Console.WriteLine(ex); }
-            catch (OperationCanceledException) { }
-        }
+        // protected override async Task OnInitializedAsync()
+        // {
+        //     using var cancel = new CancellationTokenSource(TimeSpan.FromMinutes(1));
+        //     var options = new CallOptions();
+        //     try
+        //     {
+        //         //不支持流式处理。
+        //         await foreach (var time in TimeService.SubscribeAsync(new CallContext(options)).WithCancellation(cancel.Token))
+        //         {
+        //             _testList.Add($"The time is now: {time.Time}");
+        //         }
+        //     }
+        //     catch (RpcException ex) { Console.WriteLine(ex); }
+        //     catch (OperationCanceledException) { }
+        // }
     }
 }
