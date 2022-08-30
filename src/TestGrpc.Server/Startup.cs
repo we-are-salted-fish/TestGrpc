@@ -16,6 +16,7 @@ namespace TestGrpc.Server
             {
                 config.ResponseCompressionLevel = System.IO.Compression.CompressionLevel.Optimal;
             });
+            
             services.AddCodeFirstGrpcReflection();
             
             services.AddCors(o => o.AddPolicy("AllowAll", builder =>
@@ -38,6 +39,7 @@ namespace TestGrpc.Server
             app.UseRouting();
 
             app.UseGrpcWeb();
+            
             app.UseCors();
 
             app.UseEndpoints(endpoints =>
